@@ -150,11 +150,27 @@ export default function NewInspectionPage() {
       <div className="flex justify-end space-x-4 mt-6">
         <button
           type="button"
-          onClick={() => router.push('/dashboard')} // Or '/inspections'
+          onClick={() => router.push('/inspections')} // Changed to /inspections
           className="px-6 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500"
         >
           Cancel
         </button>
+        <Link href="/inspections/forms/bulk-sample" passHref>
+          <button
+            type="button"
+            className="px-6 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Go to Bulk Sample Form
+          </button>
+        </Link>
+        <Link href="/inspections/forms/hmi-inventory" passHref>
+          <button
+            type="button"
+            className="px-6 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Go to HMI Inventory Form
+          </button>
+        </Link>
         <button
           type="button"
           onClick={handleStartInspection}
